@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+  font-family: "Oxygen", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-background: #030207;
+  --color-white: #fff;
+  --color-blue: #1474b4;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-white);
+}
+
+a {
+  color: var(--color-blue);
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), var(--color-background));
+  position: relative;
+  min-height: 40vh;
+}
+
+.hero__background {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  height: 40vh;
+  width: 100%;
+  z-index: -10;
+}
+
+.hero__foreground {
+  color: var(--color-white);
+  padding-top: 12vh;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.hero__text {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  line-height: 22px;
+}
+
+.section {
+  padding: 0 1rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 2rem auto;
+}
+
+.section__img,
+.section__img-inline {
+  border-radius: 0.75rem;
+  /* eixo x, eixo y, blur, expansão/recuo, cor */
+  box-shadow: 0 1rem 2rem -0.5rem rgba(20, 116, 180, 0.25);
+  object-fit: cover;
+  object-position: top;
+  position: relative;
+  max-height: 30rem;
+  width: 100%;
+}
+
+.section__text,
+.section__text-inline {
+  font-size: 1rem;
+  line-height: 1.35;
+  margin: 2rem auto;
+}
+
+.section__img-inline {
+  float: left;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  height: 18rem;
+  width: 11rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.section__text-inline {
+  text-align: right;
+  line-height: 1.35;
+}
+.section__text-inline > p {
+  margin-top: 1.5rem;
+}
+
+#hangouts img {
+  object-position: center;
+}
+
+.gallery__img {
+  border-radius: 0.75rem;
+  height: 16rem;
+  width: 18rem;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.gallery__img-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.gallery__img-wrapper + .gallery__img-wrapper {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery__img-wrapper:nth-child(even) > .gallery__img {
+  top: 1rem;
+  transform: rotate(2deg);
+}
+
+.gallery__img-wrapper::after {
+  content: "";
+  background-color: rgb(228, 26, 26);
+  border-radius: 999px;
+  display: block;
+  height: 1.25rem;
+  width: 1.25rem;
+  position: absolute;
+  top: 0.38rem;
+  right: 0.75rem;
+}
+
+.gallery__img-wrapper:nth-child(even)::after {
+  left: 1rem;
+}
+
+footer {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 425px) {
+  .hero {
+    min-height: 50vh;
+  }
+  .hero__background {
+    height: 50vh;
+  }
+  .hero__title {
+    font-size: 1.8rem;
+  }
+  .hero__text {
+    margin-top: 1.1rem;
+    /* text-transform: uppercase; */
+    font-size: calc(1rem - 1px);
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__text {
+    margin-top: 1.4rem;
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 0 1rem;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 2rem auto;
+  }
+  .section__img {
+    width: 89%;
+  }
+  .section__img-inline {
+    width: 30%;
+  }
+  .section__img-inline {
+    height: 18rem;
+  }
+  .section__text-inline {
+    text-align: left;
+    line-height: normal;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-background));
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .hero__background {
+    height: calc(100vh - 1px);
+    width: 100%;
+  }
+
+  .hero__foreground {
+    color: var(--color-white);
+    padding-top: 40vh;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 5rem;
+    font-weight: 300;
+  }
+
+  .hero__text {
+    margin-top: 2rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+  }
+  .section {
+    overflow: hidden;
+    padding: 0 8rem;
+    text-align: center;
+  }
+
+  .section__title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 4rem auto;
+  }
+
+  .section__img,
+  .section__img-inline {
+    border-radius: 0.75rem;
+    /* eixo x, eixo y, blur, expansão/recuo, cor */
+    box-shadow: 0 1rem 2rem -0.5rem rgba(20, 116, 180, 0.25);
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    max-height: 30rem;
+    width: 100%;
+  }
+
+  .section__text,
+  .section__text-inline {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    margin: 4rem auto;
+  }
+
+  .section__img-inline {
+    border-top-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    float: left;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+    height: 25rem;
+    width: 20rem;
+  }
+
+  .section__text-inline {
+    margin-top: 6rem;
+    text-align: left;
+  }
+
+  .section__text-inline > p {
+    margin-top: 1.5rem;
+  }
+
+  #hangouts img {
+    object-position: center;
+  }
+
+  .gallery__img {
+    border-radius: 0.75rem;
+    height: 16rem;
+    width: 16rem;
+    object-fit: cover;
+    transform: rotate(-2deg); /* deg = degrees */
+  }
+
+  .gallery__img-wrapper {
+    display: inline-block;
+    position: relative;
+  }
+
+  .gallery__img-wrapper + .gallery__img-wrapper {
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
+
+  .gallery__img-wrapper:nth-child(even) > .gallery__img {
+    top: 1rem;
+    transform: rotate(2deg);
+  }
+
+  .gallery__img-wrapper::after {
+    content: "";
+    background-color: rgb(228, 26, 26);
+    border-radius: 999px;
+    display: block;
+    height: 1.25rem;
+    width: 1.25rem;
+    position: absolute;
+    top: 0.25rem;
+    right: 1rem;
+  }
+
+  .gallery__img-wrapper:nth-child(even)::after {
+    left: 1rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+  }
+}
