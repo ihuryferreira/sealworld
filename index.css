@@ -1,3 +1,4 @@
+/* Estilo Global */
 * {
   box-sizing: border-box;
   font-family: "Oxygen", system-ui, -apple-system, BlinkMacSystemFont,
@@ -6,13 +7,13 @@
   margin: 0;
   padding: 0;
 }
-
+/* Variáveis de cores */
 :root {
   --color-background: #030207;
   --color-white: #fff;
   --color-blue: #1474b4;
 }
-
+/* Estilos Globais */
 body {
   background-color: var(--color-background);
   color: var(--color-white);
@@ -21,7 +22,7 @@ body {
 a {
   color: var(--color-blue);
 }
-
+/* Seção Hero */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.3), var(--color-background));
   position: relative;
@@ -55,7 +56,7 @@ a {
   letter-spacing: 0.3em;
   line-height: 22px;
 }
-
+/* Seção Geral */
 .section {
   padding: 0 1rem;
   overflow: hidden;
@@ -67,7 +68,7 @@ a {
   font-weight: 300;
   margin: 2rem auto;
 }
-
+/* Estilos para Imagens e Textos */
 .section__img,
 .section__img-inline {
   border-radius: 0.75rem;
@@ -154,7 +155,7 @@ footer {
   padding: 1rem;
   text-align: center;
 }
-
+/* Estilos Responsivos */
 @media screen and (min-width: 425px) {
   .hero {
     min-height: 50vh;
@@ -167,7 +168,6 @@ footer {
   }
   .hero__text {
     margin-top: 1.1rem;
-    /* text-transform: uppercase; */
     font-size: calc(1rem - 1px);
     letter-spacing: 2px;
     line-height: 25px;
